@@ -21,6 +21,7 @@ public class ComparatorExample {
 		
 		
 		// List Person sort by name
+		
 //		Collections.sort(listPerson, new Comparator<Person>() {
 //			@Override
 //			public int compare(Person ps1, Person ps2) {
@@ -28,6 +29,13 @@ public class ComparatorExample {
 //			}
 //		});
 		
+		
+		listPerson.sort(new Comparator<Person>() {
+			@Override
+			public int compare(Person ps1, Person ps2) {
+				return ps1.getName().compareTo(ps2.getName());
+			}
+		});
 		
 		
 		/* Lambda
