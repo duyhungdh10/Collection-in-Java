@@ -21,17 +21,31 @@ public class ComparatorExample {
 		
 		
 		// List Person sort by name
-		Collections.sort(listPerson, new Comparator<Person>() {
-			@Override
-			public int compare(Person ps1, Person ps2) {
-				return ps1.getName().compareTo(ps2.getName());
-			}
-		});
+//		Collections.sort(listPerson, new Comparator<Person>() {
+//			@Override
+//			public int compare(Person ps1, Person ps2) {
+//				return ps1.getName().compareTo(ps2.getName());
+//			}
+//		});
+		
+		
 		
 		/* Lambda
 		Collections.sort(listPerson, (Person ps1, Person ps2) -> {
 			return ps1.getName().compareTo(ps2.getName());
 		});
+		------
+		
+		Collections.sort(listPerson, (ps1,  ps2) -> {
+			return ps1.getName().compareTo(ps2.getName());
+		});
+		------
+		
+		Comparator<Person> com = (p1, p2) -> {
+			return p1.getName().compareTo(p2.getName());
+		};
+		Collections.sort(listPerson, com);
+		
 		*/
 		
 		System.out.println("List Person sort by name.");
